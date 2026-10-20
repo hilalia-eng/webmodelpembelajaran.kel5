@@ -1,0 +1,1180 @@
+
+/* ================= DASAR ================= */
+:root {
+  --mint: #278765;
+  --mint-dark: #1c6d50;
+  --mint-soft: #e9f8ef;
+  --mint-pale: #f4faf6;
+  --mint-border: #dcefe4;
+  --text: #34483f;
+  --muted: #718078;
+  --white: #ffffff;
+  --danger: #b94138;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  background: #fff;
+  line-height: 1.7;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* ================= HEADER ================= */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 15px 4%;
+  background: #fff;
+  box-shadow: 0 3px 18px rgba(39, 135, 101, 0.08);
+  position: relative;
+  z-index: 10;
+}
+
+.main-header {
+  position: sticky;
+  top: 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  flex-shrink: 0;
+}
+
+.brand-symbol {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  border-radius: 14px;
+  background: var(--mint);
+  color: white;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.brand-symbol span {
+  color: #baf1d0;
+}
+
+.brand h2 {
+  color: var(--mint);
+  font-size: 21px;
+  line-height: 1.3;
+}
+
+.brand p {
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.logo-container img {
+  width: 43px;
+  height: 43px;
+  object-fit: contain;
+}
+
+/* ================= NAVIGASI ================= */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.nav-link {
+  padding: 9px 12px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: var(--mint-soft);
+  color: var(--mint);
+}
+
+/* ================= TOMBOL ================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 21px;
+  border: 2px solid var(--mint);
+  border-radius: 11px;
+  background: var(--mint);
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--mint-dark);
+  border-color: var(--mint-dark);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  margin-left: 6px;
+  background: white;
+  color: var(--mint);
+}
+
+.btn-outline:hover {
+  color: white;
+}
+
+.text-button {
+  border: 0;
+  background: transparent;
+  color: var(--mint);
+  font-weight: 700;
+  padding: 8px 0;
+}
+
+.text-button:hover {
+  text-decoration: underline;
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+/* ================= LOGIN ================= */
+.login-screen {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 10% 30%, #e0f5e8 0, transparent 45%),
+    #f9fcfa;
+}
+
+.login-page {
+  max-width: 1240px;
+  min-height: 590px;
+  margin: auto;
+  padding: 55px 5%;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 65px;
+}
+
+.login-illustration {
+  max-width: 570px;
+}
+
+.eyebrow {
+  display: inline-block;
+  color: var(--mint);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+}
+
+.login-illustration h1,
+.hero h1 {
+  margin: 17px 0;
+  font-size: clamp(34px, 4vw, 49px);
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.login-illustration h1 span,
+.hero h1 span {
+  display: block;
+  color: var(--mint);
+}
+
+.intro-text {
+  max-width: 500px;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.login-art {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 245px;
+  margin: 20px 0;
+}
+
+.art-circle {
+  width: 235px;
+  height: 205px;
+  border: 12px solid #d4efdf;
+  border-radius: 45% 55% 53% 47%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 15px 35px rgba(39, 135, 101, 0.1);
+}
+
+.art-book {
+  font-size: 55px;
+}
+
+.art-circle strong {
+  color: var(--mint);
+  font-size: 20px;
+}
+
+.art-circle span {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.floating-chip {
+  position: absolute;
+  padding: 9px 15px;
+  border-radius: 12px;
+  background: white;
+  color: var(--mint);
+  box-shadow: 0 8px 25px rgba(39, 135, 101, 0.12);
+  font-weight: 800;
+}
+
+.chip-one {
+  top: 12px;
+  left: 5%;
+  transform: rotate(-7deg);
+}
+
+.chip-two {
+  top: 35px;
+  right: 4%;
+  transform: rotate(7deg);
+}
+
+.chip-three {
+  bottom: 10px;
+  right: 15%;
+}
+
+.login-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  color: var(--mint);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 450px;
+  justify-self: center;
+  padding: 35px;
+  border: 1px solid var(--mint-border);
+  border-radius: 24px;
+  background: white;
+  box-shadow: 0 15px 45px rgba(39, 135, 101, 0.1);
+}
+
+.login-icon {
+  margin-bottom: 5px;
+  font-size: 36px;
+}
+
+.mini-label {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--mint);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.login-box h2 {
+  font-size: 28px;
+}
+
+.login-subtitle {
+  margin-bottom: 23px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.login-box label {
+  display: block;
+  margin: 14px 0 7px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 13px;
+  border: 1px solid #dce8df;
+  border-radius: 10px;
+  background: #fbfdfb;
+}
+
+.input-wrap:focus-within {
+  border-color: var(--mint);
+  box-shadow: 0 0 0 3px #e4f5eb;
+}
+
+.input-wrap input {
+  width: 100%;
+  min-width: 0;
+  padding: 13px 0;
+  outline: none;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+}
+
+.login-button {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.login-note {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #edf3ee;
+  font-size: 12px;
+}
+
+.login-note > span {
+  font-size: 26px;
+}
+
+.login-note p {
+  color: var(--muted);
+}
+
+.login-note strong {
+  color: var(--mint);
+}
+
+/* ================= HALAMAN UTAMA ================= */
+.main-content {
+  min-height: 65vh;
+}
+
+.page {
+  position: relative;
+  min-height: 500px;
+  padding: 50px 7%;
+}
+
+.page.active-page {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= BERANDA ================= */
+#beranda {
+  padding-top: 0;
+  padding-bottom: 35px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 55px;
+  min-height: 480px;
+  padding: 45px 2%;
+  background: #e9f8ef;
+  border-radius: 0 0 28px 28px;
+}
+
+.hero-content {
+  max-width: 570px;
+}
+
+.hero h1 {
+  margin: 17px 0;
+}
+
+.welcome-text {
+  margin-bottom: 4px;
+  color: var(--mint);
+  font-size: 20px;
+}
+
+.class-info {
+  margin-bottom: 14px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.hero-description {
+  max-width: 510px;
+  color: #617469;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.hero-hint {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.hero-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 17px;
+  margin-top: 25px;
+  color: var(--mint);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.hero-visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 300px;
+}
+
+.visual-card {
+  width: 100%;
+  max-width: 330px;
+  padding: 32px 20px;
+  border: 1px solid white;
+  border-radius: 25px;
+  background: white;
+  text-align: center;
+  box-shadow: 0 18px 40px rgba(39, 135, 101, 0.12);
+}
+
+.visual-icon {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 52px;
+}
+
+.visual-small {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.visual-card h2 {
+  margin: 5px 0 15px;
+  color: var(--mint);
+  font-size: 25px;
+}
+
+.ratio-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  padding: 13px 5px;
+  border-radius: 12px;
+  background: var(--mint-soft);
+  color: var(--mint);
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.ratio-display b {
+  color: #8aab97;
+}
+
+.visual-card p {
+  margin-top: 13px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.visual-bubble {
+  position: absolute;
+  padding: 10px 15px;
+  border-radius: 13px;
+  background: white;
+  color: var(--mint);
+  box-shadow: 0 7px 20px #d2e8d9;
+  font-weight: 800;
+}
+
+.bubble-top {
+  top: 5px;
+  left: 0;
+  transform: rotate(-8deg);
+}
+
+.bubble-bottom {
+  right: 0;
+  bottom: 5px;
+  transform: rotate(5deg);
+}
+
+.youtube-bottom {
+  margin-top: 25px;
+}
+
+.youtube-bottom-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 18px;
+  border: 1px solid #f0d8d6;
+  border-radius: 14px;
+  background: white;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.04);
+}
+
+.youtube-bottom-link strong,
+.youtube-bottom-link small {
+  display: block;
+}
+
+.youtube-bottom-link strong {
+  font-size: 13px;
+}
+
+.youtube-bottom-link small {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+/* ================= JUDUL BAGIAN ================= */
+.section-heading {
+  max-width: 700px;
+  margin: 0 auto 35px;
+  text-align: center;
+}
+
+.section-heading h2 {
+  margin: 10px 0;
+  color: var(--mint);
+  font-size: clamp(25px, 3vw, 34px);
+  line-height: 1.3;
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ================= MATERI DAN KARTU ================= */
+.content-card,
+.feature-card {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 1px solid var(--mint-border);
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 8px 28px rgba(39, 135, 101, 0.06);
+}
+
+.material-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.material-icon {
+  display: grid;
+  place-items: center;
+  width: 55px;
+  height: 55px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: var(--mint-soft);
+  font-size: 28px;
+}
+
+.material-top h3 {
+  color: var(--mint);
+  font-size: 22px;
+}
+
+.content-card > p,
+.example-question p {
+  color: #65776c;
+}
+
+.example-question {
+  margin-top: 25px;
+  padding: 22px;
+  border-radius: 15px;
+  background: #f5fbf7;
+}
+
+.example-question h3 {
+  margin-bottom: 10px;
+  color: var(--mint);
+}
+
+.ratio-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+  padding: 17px 10px;
+  border-radius: 12px;
+  background: white;
+  color: var(--mint);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.step-arrow {
+  color: #91b5a0;
+}
+
+.tip-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 22px;
+  padding: 17px;
+  border-left: 4px solid var(--mint);
+  border-radius: 10px;
+  background: var(--mint-soft);
+}
+
+.tip-box > span {
+  font-size: 23px;
+}
+
+.tip-box p {
+  color: #536b5c;
+  font-size: 13px;
+}
+
+.feature-card {
+  max-width: 560px;
+  text-align: center;
+}
+
+.feature-icon {
+  margin-bottom: 8px;
+  font-size: 52px;
+}
+
+.feature-card h3 {
+  margin: 5px 0 12px;
+  color: var(--mint);
+  font-size: 23px;
+}
+
+.feature-card > p {
+  margin-bottom: 22px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.score-tip {
+  margin-bottom: 23px;
+  text-align: left;
+}
+
+/* ================= QUIZ ================= */
+.quiz-card {
+  max-width: 780px;
+  margin: auto;
+  padding: 30px;
+  border: 1px solid var(--mint-border);
+  border-radius: 22px;
+  background: white;
+  box-shadow: 0 10px 35px rgba(39, 135, 101, 0.08);
+}
+
+.quiz-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 13px;
+  color: var(--mint);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.progress-track {
+  height: 9px;
+  margin-bottom: 28px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #e5f2e9;
+}
+
+.progress-bar {
+  width: 0;
+  height: 100%;
+  border-radius: 20px;
+  background: var(--mint);
+  transition: width 0.3s;
+}
+
+#pertanyaan {
+  margin-bottom: 22px;
+  color: var(--text);
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.pilihan-jawaban {
+  display: grid;
+  gap: 12px;
+}
+
+.pilihan {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #dcebe1;
+  border-radius: 12px;
+  background: #f7fbf8;
+  color: var(--text);
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.6;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.pilihan:hover:not(:disabled) {
+  border-color: var(--mint);
+  background: #e5f6eb;
+}
+
+.pilihan:focus-visible,
+.btn:focus-visible,
+.nav-link:focus-visible {
+  outline: 3px solid #a9dfbe;
+  outline-offset: 3px;
+}
+
+.pilihan:disabled {
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+.pilihan.benar {
+  border-color: #278765;
+  background: #d9f4e1;
+  color: #17643f;
+}
+
+.pilihan.salah {
+  border-color: #d85b50;
+  background: #fff0ee;
+  color: #a52e27;
+}
+
+.feedback {
+  margin-top: 22px;
+  padding: 18px;
+  border-radius: 13px;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.feedback strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.feedback.benar {
+  background: #e5f7eb;
+  color: #17643f;
+}
+
+.feedback.salah {
+  background: #fff0ee;
+  color: #8f3029;
+}
+
+#tombolLanjut {
+  margin-top: 20px;
+}
+
+.hasil-quiz {
+  padding: 15px 0 0;
+  text-align: center;
+}
+
+.piala {
+  font-size: 55px;
+}
+
+.hasil-quiz h3 {
+  color: var(--mint);
+  font-size: 27px;
+}
+
+.label-hasil {
+  margin-top: 14px;
+  color: var(--muted);
+}
+
+.nilai-quiz {
+  margin: 5px 0 12px;
+  color: var(--mint);
+  font-size: clamp(40px, 7vw, 58px);
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+#pesanAkhir {
+  margin-bottom: 20px;
+}
+
+#ringkasanHasil {
+  margin-bottom: 20px;
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--mint-soft);
+  line-height: 1.9;
+}
+
+#hasilAkhir .btn {
+  margin: 5px;
+}
+
+/* ================= HALAMAN SKOR ================= */
+.score-card {
+  background: linear-gradient(180deg, #f1faf4, white);
+}
+
+.score-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 15px 0;
+}
+
+.score-stats div {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border: 1px solid var(--mint-border);
+  border-radius: 12px;
+  background: white;
+}
+
+.score-stats strong {
+  color: var(--mint);
+  font-size: 25px;
+}
+
+.score-stats span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.student-score-name {
+  margin-bottom: 15px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  padding: 28px 5%;
+  background: #e5f5eb;
+  color: #63756b;
+  text-align: center;
+}
+
+.footer strong {
+  color: var(--mint);
+  font-size: 20px;
+}
+
+.footer strong span {
+  color: #83b99a;
+}
+
+.footer p {
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 1050px) {
+  .header {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .main-header nav {
+    order: 3;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .logo-container {
+    margin-left: auto;
+  }
+
+  .hero {
+    gap: 25px;
+  }
+
+  .login-page {
+    gap: 30px;
+  }
+}
+
+/* ================= HP ================= */
+@media (max-width: 650px) {
+  .header {
+    padding: 12px 4%;
+    gap: 10px;
+  }
+
+  .brand {
+    gap: 8px;
+  }
+
+  .brand-symbol {
+    width: 36px;
+    height: 36px;
+    border-radius: 11px;
+    font-size: 18px;
+  }
+
+  .brand h2 {
+    font-size: 17px;
+  }
+
+  .brand p {
+    max-width: 155px;
+    font-size: 9px;
+  }
+
+  .logo-container {
+    gap: 6px;
+  }
+
+  .logo-container img {
+    width: 31px;
+    height: 31px;
+  }
+
+  .main-header nav {
+    justify-content: center;
+    gap: 3px;
+  }
+
+  .nav-link {
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+
+  .login-page {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 35px 5%;
+  }
+
+  .login-illustration {
+    text-align: center;
+  }
+
+  .login-illustration h1 {
+    font-size: 35px;
+  }
+
+  .intro-text {
+    font-size: 14px;
+  }
+
+  .login-art {
+    min-height: 220px;
+  }
+
+  .login-benefits {
+    justify-content: center;
+  }
+
+  .login-box {
+    padding: 25px 21px;
+  }
+
+  .page {
+    padding: 35px 5%;
+    min-height: 450px;
+  }
+
+  #beranda {
+    padding-top: 0;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 35px 6%;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-features {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    min-height: 285px;
+  }
+
+  .visual-card {
+    max-width: 290px;
+    padding: 25px 15px;
+  }
+
+  .bubble-top {
+    left: 2%;
+  }
+
+  .bubble-bottom {
+    right: 2%;
+  }
+
+  .section-heading {
+    margin-bottom: 25px;
+  }
+
+  .section-heading h2 {
+    font-size: 26px;
+  }
+
+  .content-card,
+  .feature-card,
+  .quiz-card {
+    padding: 21px 17px;
+    border-radius: 16px;
+  }
+
+  .material-top h3 {
+    font-size: 19px;
+  }
+
+  .example-question {
+    padding: 16px;
+  }
+
+  .ratio-steps {
+    gap: 7px;
+    font-size: 14px;
+  }
+
+  .quiz-top {
+    font-size: 11px;
+  }
+
+  #pertanyaan {
+    font-size: 18px;
+  }
+
+  .pilihan {
+    padding: 13px;
+    font-size: 13px;
+  }
+
+  .btn-outline {
+    margin-left: 0;
+  }
+
+  #hasilAkhir .btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .youtube-bottom-link {
+    width: 100%;
+  }
+}
+
+/* KURANGI ANIMASI JIKA DIMINTA PERANGKAT */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

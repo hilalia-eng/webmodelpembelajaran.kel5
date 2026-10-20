@@ -1,0 +1,660 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#e9f8ef">
+  <title>MathLearn | Belajar Perbandingan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= LOGIN ================= -->
+<div id="halaman-login" class="login-screen">
+  <header class="header login-header">
+    <a href="#" class="brand">
+      <div class="brand-symbol">M<span>+</span></div>
+      <div>
+        <h2>MathLearn</h2>
+        <p>Belajar Matematika Jadi Menyenangkan</p>
+      </div>
+    </a>
+
+    <div class="logo-container">
+      <img src="logo-kampus.png" alt="Logo Kampus">
+      <img src="logo-kemendikbud.png" alt="Logo Kemendikbud">
+    </div>
+  </header>
+
+  <main class="login-page">
+    <section class="login-illustration">
+      <span class="eyebrow">✦ MEDIA PEMBELAJARAN INTERAKTIF</span>
+
+      <h1>Selamat Datang di <span>MathLearn!</span></h1>
+
+      <p class="intro-text">
+        Belajar matematika kini lebih seru. Pahami materi
+        Perbandingan, uji kemampuanmu, dan temukan pengalaman
+        belajar yang menyenangkan.
+      </p>
+
+      <div class="login-art">
+        <div class="floating-chip chip-one">✦ 2 : 3</div>
+        <div class="floating-chip chip-two">4 : 6 ✦</div>
+
+        <div class="art-circle">
+          <div class="art-book">📚</div>
+          <strong>Let's Learn!</strong>
+          <span>Matematika itu menyenangkan</span>
+        </div>
+
+        <div class="floating-chip chip-three">× &nbsp; + &nbsp; ÷</div>
+      </div>
+
+      <div class="login-benefits">
+        <span>✓ Materi mudah dipahami</span>
+        <span>✓ Quiz interaktif</span>
+        <span>✓ Skor otomatis</span>
+      </div>
+    </section>
+
+    <section class="login-box">
+      <div class="login-icon">👋</div>
+      <span class="mini-label">MULAI PETUALANGAN BELAJAR</span>
+      <h2>Login Siswa</h2>
+      <p class="login-subtitle">Yuk, isi identitasmu terlebih dahulu!</p>
+
+      <form id="loginForm">
+        <label for="nama">Nama Lengkap</label>
+        <div class="input-wrap">
+          <span aria-hidden="true">👤</span>
+          <input type="text" id="nama"
+            placeholder="Masukkan nama lengkap"
+            maxlength="80" autocomplete="name" required>
+        </div>
+
+        <label for="kelas">Kelas</label>
+        <div class="input-wrap">
+          <span aria-hidden="true">🎓</span>
+          <input type="text" id="kelas"
+            placeholder="Contoh: VII A"
+            maxlength="30" required>
+        </div>
+
+        <button type="submit" class="btn login-button">
+          Masuk ke Pembelajaran <span>→</span>
+        </button>
+      </form>
+
+      <div class="login-note">
+        <span>📖</span>
+        <p>Media Pembelajaran Matematika<br>
+          <strong>Materi Perbandingan</strong>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <strong>MathLearn ✦</strong>
+    <p>Media Pembelajaran Matematika: Perbandingan</p>
+    <p>© 2026 MathLearn</p>
+  </footer>
+</div>
+
+
+<!-- ================= WEBSITE UTAMA ================= -->
+<div id="website-utama" hidden>
+  <header class="header main-header">
+    <a href="#" class="brand" aria-label="MathLearn">
+      <div class="brand-symbol">M<span>+</span></div>
+      <div>
+        <h2>MathLearn</h2>
+        <p>Belajar Matematika Jadi Menyenangkan</p>
+      </div>
+    </a>
+
+    <nav aria-label="Menu pembelajaran">
+      <button class="nav-link active" data-page="beranda">Beranda</button>
+      <button class="nav-link" data-page="materi">Materi</button>
+      <button class="nav-link" data-page="quiz">Quiz</button>
+      <button class="nav-link" data-page="skor">Skor</button>
+      <button class="nav-link" data-page="evaluasi">Evaluasi</button>
+    </nav>
+
+    <div class="logo-container">
+      <img src="logo-kampus.png" alt="Logo Kampus">
+      <img src="logo-kemendikbud.png" alt="Logo Kemendikbud">
+    </div>
+  </header>
+
+  <main class="main-content">
+
+    <!-- BERANDA -->
+    <section id="beranda" class="page active-page">
+      <div class="hero">
+        <div class="hero-content">
+          <span class="eyebrow">✦ SELAMAT DATANG DI MATHLEARN</span>
+          <h1>Matematika Jadi <span>Lebih Mudah!</span></h1>
+          <h3 class="welcome-text" id="salamSiswa"></h3>
+          <p class="class-info" id="infoKelas"></p>
+
+          <p class="hero-description">
+            Mari mengenal materi <strong>Perbandingan</strong>
+            melalui penjelasan sederhana, contoh soal, dan
+            latihan yang menyenangkan.
+          </p>
+
+          <div class="hero-actions">
+            <button class="btn" data-go="materi">Mulai Belajar →</button>
+            <span class="hero-hint">📖 Siap belajar hari ini?</span>
+          </div>
+
+          <div class="hero-features">
+            <span>✓ Materi ringkas</span>
+            <span>✓ Quiz interaktif</span>
+            <span>✓ Skor otomatis</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="visual-bubble bubble-top">✦ 2 : 3</div>
+          <div class="visual-card">
+            <span class="visual-icon">📚</span>
+            <span class="visual-small">TOPIK PEMBELAJARAN</span>
+            <h2>Perbandingan</h2>
+            <div class="ratio-display">
+              <span>2</span><b>:</b><span>3</span>
+              <b>=</b><span>4</span><b>:</b><span>6</span>
+            </div>
+            <p>Belajar • Pahami • Berlatih</p>
+          </div>
+          <div class="visual-bubble bubble-bottom">✦ Ayo Bisa!</div>
+        </div>
+      </div>
+
+      <div class="youtube-bottom">
+        <a href="https://youtu.be/QUT-k6v63dw?feature=shared"
+          target="_blank" rel="noopener noreferrer"
+          class="youtube-bottom-link">
+          <span class="youtube-icon">
+            <svg viewBox="0 0 24 24" width="27" height="27"
+              aria-hidden="true">
+              <rect x="2" y="5" width="20" height="14"
+                rx="4" fill="#FF0000"/>
+              <path d="M10 9 L16 12 L10 15 Z" fill="white"/>
+            </svg>
+          </span>
+          <span>
+            <strong>Video Pembelajaran</strong>
+            <small>Tonton melalui YouTube ↗</small>
+          </span>
+        </a>
+      </div>
+    </section>
+
+
+    <!-- MATERI -->
+    <section id="materi" class="page" hidden>
+      <div class="section-heading">
+        <span class="eyebrow">01 / MARI BELAJAR</span>
+        <h2>Kenali Materi Perbandingan</h2>
+        <p>Pahami konsepnya, lalu coba perhatikan contoh berikut.</p>
+      </div>
+
+      <div class="content-card">
+        <div class="material-top">
+          <div class="material-icon">📖</div>
+          <div>
+            <span class="mini-label">KONSEP DASAR</span>
+            <h3>Apa Itu Perbandingan?</h3>
+          </div>
+        </div>
+
+        <p>
+          Perbandingan adalah cara membandingkan dua besaran
+          atau lebih yang sejenis. Perbandingan biasanya ditulis
+          menggunakan tanda titik dua (:).
+        </p>
+
+        <div class="example-question">
+          <h3>✏️ Contoh Soal</h3>
+          <p>
+            Ani mempunyai <strong>4 buku</strong>, sedangkan Budi
+            mempunyai <strong>6 buku</strong>. Berapakah
+            perbandingan jumlah buku mereka?
+          </p>
+
+          <div class="ratio-steps">
+            <span>4 : 6</span>
+            <span class="step-arrow">→</span>
+            <span>4 ÷ 2 : 6 ÷ 2</span>
+            <span class="step-arrow">→</span>
+            <strong>2 : 3</strong>
+          </div>
+
+          <p>
+            Jadi, perbandingan sederhana jumlah buku Ani dan
+            Budi adalah <strong>2 : 3</strong>.
+          </p>
+        </div>
+
+        <div class="tip-box">
+          <span>💡</span>
+          <p><strong>Ingat!</strong><br>
+            Untuk menyederhanakan perbandingan, bagilah kedua
+            bilangan dengan faktor persekutuan terbesarnya.
+          </p>
+        </div>
+
+        <div class="card-actions">
+          <button class="btn" data-go="quiz">Sudah Paham? Lanjut Quiz →</button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- QUIZ INTERAKTIF -->
+    <section id="quiz" class="page" hidden>
+      <div class="section-heading">
+        <span class="eyebrow">02 / UJI KEMAMPUAN</span>
+        <h2>Waktunya Mengerjakan Quiz!</h2>
+        <p>
+          Terdapat 10 soal. Pilih jawaban dengan teliti,
+          karena jawaban yang sudah dipilih tidak dapat diubah.
+        </p>
+      </div>
+
+      <div class="quiz-card">
+        <div class="quiz-top">
+          <span id="nomorSoal">Soal 1 dari 10</span>
+          <span id="skorSementara">Skor: 0</span>
+        </div>
+
+        <div class="progress-track">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+
+        <div id="areaSoal">
+          <h3 id="pertanyaan"></h3>
+          <div id="pilihanJawaban" class="pilihan-jawaban"></div>
+        </div>
+
+        <div id="feedback" class="feedback" hidden aria-live="polite"></div>
+
+        <button id="tombolLanjut" class="btn" hidden>
+          Soal Berikutnya →
+        </button>
+
+        <div id="hasilAkhir" class="hasil-quiz" hidden aria-live="polite">
+          <div class="piala">🏆</div>
+          <h3>Quiz Selesai!</h3>
+          <p class="label-hasil">Nilai Akhir Kamu</p>
+          <p id="nilaiAkhir" class="nilai-quiz">0 / 100</p>
+          <p id="pesanAkhir"></p>
+          <div id="ringkasanHasil"></div>
+          <button id="tombolUlang" class="btn">Ulangi Quiz</button>
+          <button class="btn btn-outline" data-go="skor">Lihat Halaman Skor</button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SKOR -->
+    <section id="skor" class="page" hidden>
+      <div class="section-heading">
+        <span class="eyebrow">03 / HASIL BELAJAR</span>
+        <h2>Hasil Quiz Kamu</h2>
+        <p>Nilai dari quiz yang kamu kerjakan di MathLearn.</p>
+      </div>
+
+      <div class="feature-card score-card">
+        <div class="feature-icon">🏆</div>
+        <span class="mini-label">HASIL PEMBELAJARAN</span>
+        <h3 id="statusSkor">Kamu Belum Mengerjakan Quiz</h3>
+        <p id="keteranganSkor">
+          Selesaikan 10 soal quiz untuk melihat nilai kamu di sini.
+        </p>
+
+        <div id="panelSkor" hidden>
+          <p class="nilai-quiz" id="nilaiHalamanSkor">0 / 100</p>
+          <div class="score-stats">
+            <div><strong id="jumlahBenar">0</strong><span>Benar</span></div>
+            <div><strong id="jumlahSalah">0</strong><span>Salah</span></div>
+          </div>
+          <p id="namaPemilikSkor" class="student-score-name"></p>
+        </div>
+
+        <div class="tip-box score-tip">
+          <span>⭐</span>
+          <p>Terus semangat belajar dan pahami pembahasan setiap soal.</p>
+        </div>
+
+        <button class="btn" data-go="quiz">Ke Halaman Quiz →</button>
+        <button class="btn btn-outline" data-go="materi">Pelajari Materi Lagi</button>
+      </div>
+    </section>
+
+
+    <!-- EVALUASI -->
+    <section id="evaluasi" class="page" hidden>
+      <div class="section-heading">
+        <span class="eyebrow">04 / REFLEKSI BELAJAR</span>
+        <h2>Bagikan Pengalaman Belajarmu</h2>
+        <p>Pendapatmu membantu membuat MathLearn semakin baik.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">💬</div>
+        <span class="mini-label">EVALUASI PEMBELAJARAN</span>
+        <h3>Terima Kasih Sudah Belajar! 💚</h3>
+        <p>
+          Berikan tanggapan mengenai materi, tampilan website,
+          dan pengalaman belajarmu melalui formulir evaluasi.
+        </p>
+
+        <a href="https://forms.gle/wrqGHq1F1RfBSMDL9"
+          target="_blank" rel="noopener noreferrer" class="btn">
+          Isi Form Evaluasi ↗
+        </a>
+
+        <div class="card-actions">
+          <button class="text-button" data-go="beranda">← Kembali ke Beranda</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <strong>MathLearn <span>✦</span></strong>
+    <p>Media Pembelajaran Matematika: Perbandingan</p>
+    <p>© 2026 MathLearn</p>
+  </footer>
+</div>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+const loginForm = document.getElementById("loginForm");
+const halamanLogin = document.getElementById("halaman-login");
+const websiteUtama = document.getElementById("website-utama");
+const salamSiswa = document.getElementById("salamSiswa");
+const infoKelas = document.getElementById("infoKelas");
+
+const daftarHalaman = document.querySelectorAll(".page");
+const daftarMenu = document.querySelectorAll(".nav-link");
+
+let namaAktif = "";
+let kelasAktif = "";
+
+function bukaHalaman(namaHalaman) {
+  daftarHalaman.forEach(halaman => {
+    const aktif = halaman.id === namaHalaman;
+    halaman.hidden = !aktif;
+    halaman.classList.toggle("active-page", aktif);
+  });
+
+  daftarMenu.forEach(menu => {
+    const aktif = menu.dataset.page === namaHalaman;
+    menu.classList.toggle("active", aktif);
+
+    if (aktif) menu.setAttribute("aria-current", "page");
+    else menu.removeAttribute("aria-current");
+  });
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+loginForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  namaAktif = document.getElementById("nama").value.trim();
+  kelasAktif = document.getElementById("kelas").value.trim();
+
+  if (!namaAktif || !kelasAktif) {
+    alert("Silakan isi nama dan kelas terlebih dahulu.");
+    return;
+  }
+
+  sessionStorage.setItem("namaSiswa", namaAktif);
+  sessionStorage.setItem("kelasSiswa", kelasAktif);
+
+  salamSiswa.textContent = "Halo, " + namaAktif + "! 👋";
+  infoKelas.textContent = "Kelas " + kelasAktif + " • Selamat belajar!";
+
+  halamanLogin.hidden = true;
+  websiteUtama.hidden = false;
+  bukaHalaman("beranda");
+});
+
+daftarMenu.forEach(menu => {
+  menu.addEventListener("click", () => bukaHalaman(menu.dataset.page));
+});
+
+document.querySelectorAll("[data-go]").forEach(tombol => {
+  tombol.addEventListener("click", () => bukaHalaman(tombol.dataset.go));
+});
+
+
+/* ================= DATA 10 SOAL ================= */
+const daftarSoal = [
+  {
+    tanya: "Apa yang dimaksud dengan perbandingan?",
+    opsi: [
+      "Proses menjumlahkan bilangan",
+      "Cara membandingkan dua besaran atau lebih",
+      "Proses mengurangi bilangan",
+      "Cara mengukur luas bangun"
+    ],
+    benar: 1,
+    bahas: "Perbandingan digunakan untuk membandingkan dua besaran atau lebih."
+  },
+  {
+    tanya: "Bentuk sederhana dari 4 : 6 adalah ...",
+    opsi: ["2 : 3", "3 : 2", "1 : 3", "4 : 3"],
+    benar: 0,
+    bahas: "Bagi kedua bilangan dengan 2. Hasilnya 4 : 6 = 2 : 3."
+  },
+  {
+    tanya: "Bentuk sederhana dari 10 : 15 adalah ...",
+    opsi: ["5 : 3", "3 : 2", "2 : 3", "1 : 5"],
+    benar: 2,
+    bahas: "Bagi 10 dan 15 dengan 5 sehingga menjadi 2 : 3."
+  },
+  {
+    tanya: "Perbandingan 8 pensil dan 12 pensil adalah ...",
+    opsi: ["3 : 2", "2 : 3", "4 : 3", "1 : 2"],
+    benar: 1,
+    bahas: "Perbandingan 8 : 12 dibagi 4 menjadi 2 : 3."
+  },
+  {
+    tanya: "Jika A : B = 2 : 5 dan A = 6, nilai B adalah ...",
+    opsi: ["10", "12", "15", "18"],
+    benar: 2,
+    bahas: "Faktor pengalinya 6 ÷ 2 = 3. Maka B = 5 × 3 = 15."
+  },
+  {
+    tanya: "Perbandingan siswa laki-laki dan perempuan adalah 3 : 4. Jika siswa laki-laki 12 orang, jumlah siswa perempuan adalah ...",
+    opsi: ["9 orang", "12 orang", "16 orang", "20 orang"],
+    benar: 2,
+    bahas: "Faktor pengalinya 12 ÷ 3 = 4. Jumlah perempuan = 4 × 4 = 16 orang."
+  },
+  {
+    tanya: "Perbandingan yang senilai dengan 2 : 3 adalah ...",
+    opsi: ["4 : 5", "6 : 8", "8 : 12", "10 : 12"],
+    benar: 2,
+    bahas: "Kalikan kedua bilangan 2 : 3 dengan 4. Hasilnya 8 : 12."
+  },
+  {
+    tanya: "Perbandingan umur Ani dan Budi adalah 2 : 3. Jika umur Ani 10 tahun, umur Budi adalah ...",
+    opsi: ["12 tahun", "15 tahun", "18 tahun", "20 tahun"],
+    benar: 1,
+    bahas: "Faktor pengalinya 10 ÷ 2 = 5. Umur Budi = 3 × 5 = 15 tahun."
+  },
+  {
+    tanya: "Perbandingan sirup dan air adalah 1 : 4. Jika digunakan 2 gelas sirup, air yang diperlukan adalah ...",
+    opsi: ["4 gelas", "6 gelas", "8 gelas", "10 gelas"],
+    benar: 2,
+    bahas: "Kalikan kedua bagian dengan 2. Air yang diperlukan adalah 4 × 2 = 8 gelas."
+  },
+  {
+    tanya: "Perbandingan 12 : 18 jika disederhanakan menjadi ...",
+    opsi: ["3 : 2", "2 : 3", "4 : 5", "6 : 9"],
+    benar: 1,
+    bahas: "FPB dari 12 dan 18 adalah 6. Bagi keduanya dengan 6 sehingga menjadi 2 : 3."
+  }
+];
+
+
+/* ================= MESIN QUIZ ================= */
+let nomor = 0;
+let skor = 0;
+let jumlahBenar = 0;
+let terkunci = false;
+let quizSelesai = false;
+
+const pertanyaan = document.getElementById("pertanyaan");
+const pilihanJawaban = document.getElementById("pilihanJawaban");
+const feedback = document.getElementById("feedback");
+const tombolLanjut = document.getElementById("tombolLanjut");
+const hasilAkhir = document.getElementById("hasilAkhir");
+const areaSoal = document.getElementById("areaSoal");
+
+function tampilkanSoal() {
+  terkunci = false;
+  const soal = daftarSoal[nomor];
+
+  document.getElementById("nomorSoal").textContent =
+    `Soal ${nomor + 1} dari ${daftarSoal.length}`;
+
+  document.getElementById("skorSementara").textContent = `Skor: ${skor}`;
+  document.getElementById("progressBar").style.width =
+    `${(nomor / daftarSoal.length) * 100}%`;
+
+  pertanyaan.textContent = soal.tanya;
+  pilihanJawaban.innerHTML = "";
+  feedback.hidden = true;
+  feedback.className = "feedback";
+  tombolLanjut.hidden = true;
+
+  soal.opsi.forEach((teks, indeks) => {
+    const tombol = document.createElement("button");
+    tombol.type = "button";
+    tombol.className = "pilihan";
+    tombol.textContent = `${String.fromCharCode(65 + indeks)}. ${teks}`;
+    tombol.addEventListener("click", () => pilihJawaban(indeks));
+    pilihanJawaban.appendChild(tombol);
+  });
+}
+
+function pilihJawaban(pilihan) {
+  if (terkunci || quizSelesai) return;
+  terkunci = true;
+
+  const soal = daftarSoal[nomor];
+  const semuaTombol = pilihanJawaban.querySelectorAll("button");
+  const jawabanBenar = pilihan === soal.benar;
+
+  semuaTombol.forEach((tombol, indeks) => {
+    tombol.disabled = true;
+
+    if (indeks === soal.benar) tombol.classList.add("benar");
+    if (indeks === pilihan && !jawabanBenar) {
+      tombol.classList.add("salah");
+    }
+  });
+
+  if (jawabanBenar) {
+    skor += 10;
+    jumlahBenar++;
+    feedback.classList.add("benar");
+    feedback.innerHTML =
+      `<strong>✅ Jawaban benar! +10 poin</strong>${soal.bahas}`;
+  } else {
+    feedback.classList.add("salah");
+    feedback.innerHTML =
+      `<strong>❌ Jawaban salah. Skor tetap.</strong>
+       Jawaban benar: ${String.fromCharCode(65 + soal.benar)}.
+       ${soal.opsi[soal.benar]}.
+       <br><br><strong>Pembahasan:</strong> ${soal.bahas}`;
+  }
+
+  feedback.hidden = false;
+  document.getElementById("skorSementara").textContent = `Skor: ${skor}`;
+  document.getElementById("progressBar").style.width =
+    `${((nomor + 1) / daftarSoal.length) * 100}%`;
+
+  tombolLanjut.textContent =
+    nomor === daftarSoal.length - 1
+      ? "Lihat Nilai Akhir →"
+      : "Soal Berikutnya →";
+
+  tombolLanjut.hidden = false;
+}
+
+function tampilkanHasil() {
+  quizSelesai = true;
+  areaSoal.hidden = true;
+  feedback.hidden = true;
+  tombolLanjut.hidden = true;
+  hasilAkhir.hidden = false;
+
+  document.getElementById("nomorSoal").textContent = "Quiz selesai";
+  document.getElementById("skorSementara").textContent = `Skor: ${skor}`;
+  document.getElementById("progressBar").style.width = "100%";
+  document.getElementById("nilaiAkhir").textContent = `${skor} / 100`;
+
+  document.getElementById("pesanAkhir").textContent =
+    skor >= 80 ? "Hebat! Pemahamanmu sangat baik! 🎉" :
+    skor >= 60 ? "Bagus! Terus berlatih agar lebih mahir." :
+    "Jangan menyerah! Pelajari kembali materi dan terus berlatih.";
+
+  document.getElementById("ringkasanHasil").innerHTML =
+    `Jawaban benar: <strong>${jumlahBenar}</strong> dari 10 soal<br>
+     Jawaban salah: <strong>${10 - jumlahBenar}</strong> dari 10 soal`;
+
+  // Tampilkan nilai pada halaman Skor
+  document.getElementById("statusSkor").textContent =
+    "Quiz Berhasil Diselesaikan!";
+
+  document.getElementById("keteranganSkor").textContent =
+    "Berikut hasil quiz kamu, " + namaAktif + ".";
+
+  document.getElementById("panelSkor").hidden = false;
+  document.getElementById("nilaiHalamanSkor").textContent = `${skor} / 100`;
+  document.getElementById("jumlahBenar").textContent = jumlahBenar;
+  document.getElementById("jumlahSalah").textContent = 10 - jumlahBenar;
+  document.getElementById("namaPemilikSkor").textContent =
+    namaAktif + " • Kelas " + kelasAktif;
+}
+
+tombolLanjut.addEventListener("click", () => {
+  if (nomor < daftarSoal.length - 1) {
+    nomor++;
+    tampilkanSoal();
+  } else {
+    tampilkanHasil();
+  }
+});
+
+document.getElementById("tombolUlang").addEventListener("click", () => {
+  nomor = 0;
+  skor = 0;
+  jumlahBenar = 0;
+  terkunci = false;
+  quizSelesai = false;
+
+  areaSoal.hidden = false;
+  hasilAkhir.hidden = true;
+  tampilkanSoal();
+  bukaHalaman("quiz");
+});
+
+// Siapkan soal pertama
+tampilkanSoal();
+</script>
+
+</body>
+</html>
